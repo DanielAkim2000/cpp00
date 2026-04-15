@@ -27,14 +27,64 @@ void Contact::setContact()
 {
 	std::cout << "First name: ";
 	std::getline(std::cin, firstName);
+	if (std::cin.eof())
+		return ((void)0);
+	while (firstName.length() == 0)
+	{
+		std::cout << "Empty field is not valid" << std::endl;
+		std::cout << "First name: ";
+		std::getline(std::cin, firstName);
+		if (std::cin.eof())
+			return ((void)0);
+	}
 	std::cout << "Last name : ";
 	std::getline(std::cin, lastName);
+	if (std::cin.eof())
+		return ((void)0);
+	while (lastName.length() == 0)
+	{
+		std::cout << "Empty field is not valid" << std::endl;
+		std::cout << "Last name: ";
+		std::getline(std::cin, lastName);
+		if (std::cin.eof())
+			return ((void)0);
+	}
 	std::cout << "Nickname : ";
 	std::getline(std::cin, nickname);
+	if (std::cin.eof())
+		return ((void)0);
+	while (nickname.length() == 0)
+	{
+		std::cout << "Empty field is not valid" << std::endl;
+		std::cout << "Nickname: ";
+		std::getline(std::cin, nickname);
+		if (std::cin.eof())
+			return ((void)0);
+	}
 	std::cout << "Phone number: ";
 	std::getline(std::cin, phoneNumber);
+	if (std::cin.eof())
+		return ((void)0);
+	while (phoneNumber.length() == 0)
+	{
+		std::cout << "Empty field is not valid" << std::endl;
+		std::cout << "Phone number: ";
+		std::getline(std::cin, phoneNumber);
+		if (std::cin.eof())
+			return ((void)0);
+	}
 	std::cout << "Darkest secret: ";
 	std::getline(std::cin, darkestSecret);
+	if (std::cin.eof())
+		return ((void)0);
+	while (darkestSecret.length() == 0)
+	{
+		std::cout << "Empty field is not valid" << std::endl;
+		std::cout << "Darkest secret: ";
+		std::getline(std::cin, darkestSecret);
+		if (std::cin.eof())
+			return ((void)0);
+	}
 }
 
 void Contact::displayContact() const

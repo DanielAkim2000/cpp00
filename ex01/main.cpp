@@ -12,7 +12,8 @@ int main() {
 	while (true) {
 		std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
 		std::getline(std::cin, command);
-
+		if (std::cin.eof())
+			return (0);
 		if (command == "ADD")
 		{
 			phonebook.addContact();
