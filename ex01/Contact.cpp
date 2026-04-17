@@ -23,68 +23,69 @@ Contact &Contact::operator=(const Contact &other)
 	return (*this);
 }
 
-void Contact::setContact()
+bool Contact::setContact()
 {
 	std::cout << "First name: ";
 	std::getline(std::cin, firstName);
 	if (std::cin.eof())
-		return ((void)0);
+		return (false);
 	while (firstName.length() == 0)
 	{
 		std::cout << "Empty field is not valid" << std::endl;
 		std::cout << "First name: ";
 		std::getline(std::cin, firstName);
 		if (std::cin.eof())
-			return ((void)0);
+			return (false);
 	}
 	std::cout << "Last name : ";
 	std::getline(std::cin, lastName);
 	if (std::cin.eof())
-		return ((void)0);
+		return (false);
 	while (lastName.length() == 0)
 	{
 		std::cout << "Empty field is not valid" << std::endl;
 		std::cout << "Last name: ";
 		std::getline(std::cin, lastName);
 		if (std::cin.eof())
-			return ((void)0);
+			return (false);
 	}
 	std::cout << "Nickname : ";
 	std::getline(std::cin, nickname);
 	if (std::cin.eof())
-		return ((void)0);
+		return (false);
 	while (nickname.length() == 0)
 	{
 		std::cout << "Empty field is not valid" << std::endl;
 		std::cout << "Nickname: ";
 		std::getline(std::cin, nickname);
 		if (std::cin.eof())
-			return ((void)0);
+			return (false);
 	}
 	std::cout << "Phone number: ";
 	std::getline(std::cin, phoneNumber);
 	if (std::cin.eof())
-		return ((void)0);
+		return (false);
 	while (phoneNumber.length() == 0)
 	{
 		std::cout << "Empty field is not valid" << std::endl;
 		std::cout << "Phone number: ";
 		std::getline(std::cin, phoneNumber);
 		if (std::cin.eof())
-			return ((void)0);
+			return (false);
 	}
 	std::cout << "Darkest secret: ";
 	std::getline(std::cin, darkestSecret);
 	if (std::cin.eof())
-		return ((void)0);
+		return (false);
 	while (darkestSecret.length() == 0)
 	{
 		std::cout << "Empty field is not valid" << std::endl;
 		std::cout << "Darkest secret: ";
 		std::getline(std::cin, darkestSecret);
 		if (std::cin.eof())
-			return ((void)0);
+			return (false);
 	}
+	return (true);
 }
 
 void Contact::displayContact() const

@@ -25,7 +25,8 @@ PhoneBook &PhoneBook::operator=(const PhoneBook &other)
 void PhoneBook::addContact()
 {
 	Contact newContact;
-	newContact.setContact();
+	if (!newContact.setContact())
+		return;
 
 	contacts[index] = newContact;
 	index = (index + 1) % 8;

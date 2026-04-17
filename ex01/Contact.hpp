@@ -5,22 +5,24 @@
 #include <string>
 #include <iomanip>
 
-class Contact {
-	private:
-		std::string firstName;
-		std::string lastName;
-		std::string nickname;
-		std::string phoneNumber;
-		std::string darkestSecret;
-		void displayField(const std::string &str) const;
-	public:
-		Contact();
-		Contact(const Contact &other);
-		~Contact();
-		Contact &operator=(const Contact &other);
-		void setContact();
-		void displayContact() const;
-		void displayContactTruncate() const;
+class Contact
+{
+private:
+	std::string firstName;
+	std::string lastName;
+	std::string nickname;
+	std::string phoneNumber;
+	std::string darkestSecret;
+	void displayField(const std::string &str) const;
+
+public:
+	Contact();
+	Contact(const Contact &other);
+	~Contact();
+	Contact &operator=(const Contact &other);
+	bool setContact();
+	void displayContact() const;
+	void displayContactTruncate() const;
 };
 
 #endif
